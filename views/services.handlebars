@@ -1,0 +1,183 @@
+        <!--FORM-->
+        <script src="js/services-handler.js"></script>
+        <div class=" column level p-3 mr-6">
+
+          <h1 class="title is-3">Services</h1>
+          <div id="creator" class="card card-header is-fullwidth">
+            <a href="#" id="create-btn" class="button is-info m-1 myButton">Create</a>
+            <div class="create-form">
+
+            </div>
+          </div>
+
+          <div id="table">
+              <table class="table is-fullwidth">
+                <thead>
+                  <tr>
+
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Cost</th>
+                    <th>Observations</th>
+
+                  </tr>
+
+                  <tbody>
+                    
+                      
+                      {{#each Services}}
+                        
+                        {{>services-block}}
+
+                       {{/each}}
+                       
+
+                    
+                </thead>
+                
+          </div>
+      
+        </div>
+
+        <!--Modals-->
+
+        <!--Create Modal-->
+        <div id="myModal" class="modal card">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            
+            <div class=" column level p-3 mr-6">
+
+              <h1 class="is-size-1">Type of Services</h1>
+    
+              <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                  <input id="service_name" class="input" type="text" placeholder="">
+                </div>
+              </div>
+    
+              <div class="field">
+                <label class="label">Cost</label>
+                <div class="control">
+                  <input id="service_cost" class="input" type="number" placeholder="">
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Observations</label>
+                <div class="control">
+                  <input id="service_observations" class="input" type="text" placeholder="">
+                </div>
+              </div>
+              
+
+              <div class="is-mobil level-right is-narrow">
+                <a href="#" id="cancelCreate" class="button is-info m-1 myButton">Cancel</a>
+                <a href="#" id="saveService" class="button is-info m-1 myButton">Save</a>
+              </div>
+    
+            </div>
+          </div>
+        
+        </div>
+
+          <!--Edit Modal-->
+          <div id="editModal" class="modal card">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="closeEdit">&times;</span>
+              
+              <div class=" column level p-3 mr-6">
+  
+                
+              <h1 class="is-size-1">service Edition</h1>
+    
+              <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                  <input id="edit_service_name" class="input" type="text" placeholder="">
+                </div>
+              </div>
+    
+              <div class="field">
+                <label class="label">Cost</label>
+                <div class="control">
+                  <input id="edit_service_cost" class="input" type="number" placeholder="50">
+                </div>
+              </div>
+              
+              <div class="field">
+                <label class="label">Observations</label>
+                <div class="control">
+                  <input id="edit_service_observations" class="input" type="text" placeholder="">
+                </div>
+              </div>
+               
+              <div class="is-mobil level-right is-narrow">
+                <a href="#" id="cancelEdit" class="button is-info m-1 myButton">Cancel</a>
+                <a href="#" id="saveEdit" class="button is-info m-1 myButton">Save</a>
+              </div>
+    
+            </div>
+          </div>
+          
+          </div>
+
+        <!--View Modal-->
+        <div id="viewModal" class="modal card">
+
+
+          <div class="modal-content">
+            <span class="closeView">&times;</span>
+            
+            <div class=" column level p-3 mr-6">
+
+              <h1 id="view_service_name" class="is-size-1">service Name</h1>
+  
+              <div class="field">
+                <label class="label">Cost</label>
+                <div class="control">
+                  <p id="view_service_cost" class="card"></p>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Observations</label>
+                <div class="control">
+                  <p class="card p-1" id="view_service_observations"></p>
+                </div>
+              </div>
+
+              <a id="exitView" class="button is-info m-1">Exit</a>
+    
+            </div>
+          </div>
+        
+        </div>
+        
+        <!--Delete Modal-->
+        <div id="delete-prompt" class="modal card">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="closeDeletion">&times;</span>
+
+            <div class="">
+              <h1>Are you sure you want to delete</h1>
+              <div class="level">
+                <a href="#" id="cancelDel" class="button is-info m-1 myButton">Cancel</a>
+                <a href="#" id="deleteBtn" class="button is-info m-1 myButton">Delete</a>
+
+              </div>
+            </div>
+            
+            
+          </div>
+        
+        </div>
+
+        

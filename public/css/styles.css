@@ -1,0 +1,152 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+html,
+body {
+ background-position:100% 100%; /*extremo inferior izquierdo*/ 
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: lavender;
+}
+
+div[class*=box] {
+  height: 33.33%;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-1 { background-color: #FF6766; }
+.box-2 { background-color: #3C3C3C; }
+.box-3 { background-color: #66A182; }
+
+.btn {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  
+  cursor: pointer;
+}
+
+/* 
+========================
+      BUTTON ONE
+========================
+*/
+.btn-one {
+  color: rgb(255, 255, 255);
+  transition: all 0.3s;
+  position: relative;
+  background-color: rgba(133, 133, 233, 0.979);
+}
+.btn-one span {
+  transition: all 0.3s;
+}
+.btn-one::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(255,255,255,0.5);
+  border-bottom-color: rgba(255,255,255,0.5);
+  transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+  letter-spacing: 2px;
+}
+.btn-one:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+.btn-one::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+}
+.btn-one:hover::after {
+  opacity: 0; 
+  transform: scale(0.1, 1);
+}
+
+#menu{
+    background-color: rgba(133, 133, 233, 0.979);
+    height: 100vh;
+}
+
+#login{
+  background-color: rgba(133, 133, 233, 0.979);
+  
+  transition: .5s ease;
+}
+
+.easein{
+  
+  transition: .5s ease;
+}
+
+.bview{
+  color: #5f5cf5;
+}
+
+.bdelete{
+  color: #68638a;
+}
+
+.bedit{
+  color: rgb(59, 131, 247) ;
+}
+
+.iconsBar{
+  height: 41px;
+}
+
+i{
+  height: 17px;
+}
+
+.myButton {
+	box-shadow:inset 4px -5px 0px 0px rgba(133, 133, 233, 0.979);
+	background:linear-gradient(to bottom, rgba(133, 133, 233, 0.979) 5%,#a490f3 100%);
+	background-color: rgba(133, 133, 233, 0.979),
+	border-radius:6px;
+	border:1px solid #a548e8;
+	display:inline-block;
+	cursor:pointer;
+	color: #a548e8;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:4px 15px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #7537a8;
+}
+/* .myButton:hover {
+	background:linear-gradient(to bottom,  #916fad 5%, #916fad 100%);
+	background:linear-gradient(to bottom,  5%, #916fad 100%);
+	background-color:#d5bfe6;
+} */
+.myButton:active {
+	position:relative;
+	top:1px;
+}
